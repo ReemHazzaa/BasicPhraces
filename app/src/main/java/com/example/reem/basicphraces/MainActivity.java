@@ -5,16 +5,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Switch;
-import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
 
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
     public void play(View view){
         Button pressedButton = (Button) view;
-        TextView phraseTextView = findViewById(R.id.phraseTextView);
-        phraseTextView.setVisibility(view.VISIBLE);
 
         String phraseTOBePlayed = view.getTag().toString();
 
@@ -23,33 +26,32 @@ public class MainActivity extends AppCompatActivity {
 
 
         if(phraseTOBePlayed.equals("canyoutakemetoairportplease")){
-            phraseTextView.setText("Beni havalimanı götürebilirmisiniz lütfen?");
+            makeLongToast("Beni havalimanı götürebilirmisiniz lütfen?");
 
         }else if(phraseTOBePlayed.equals("howmuchwillitbe")){
-            phraseTextView.setText("Ne kadar tutar?");
+            makeLongToast("Ne kadar tutar?");
 
         }else if(phraseTOBePlayed.equals("isitfarfromhere")){
-            phraseTextView.setText("Buraya uzak mi?");
+            makeLongToast("Buraya uzak mi?");
 
         }else if(phraseTOBePlayed.equals("itsstraighton")){
-            phraseTextView.setText("Dümdüz gidin.");
+            makeLongToast("Dümdüz gidin.");
 
         }else if(phraseTOBePlayed.equals("stop")){
-            phraseTextView.setText("Dur!");
+            makeLongToast("Dur!");
 
         }else if(phraseTOBePlayed.equals("takemethereplease")){
-            phraseTextView.setText("Lütfen beni buraya götürün.");
+            makeLongToast("Lütfen beni buraya götürün.");
 
         }else if(phraseTOBePlayed.equals("taxi")){
-            phraseTextView.setText("Taxi!");
+            makeLongToast("Taxi!");
 
         }else{
-            phraseTextView.setText("Sola gideceksinis.");
+            makeLongToast("Sola gideceksinis.");
         }
     }
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+    public void makeLongToast(String turkishTranslation) {
+        Toast.makeText(this, turkishTranslation, Toast.LENGTH_LONG).show();
     }
 }

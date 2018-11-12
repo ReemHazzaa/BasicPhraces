@@ -6,31 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="120dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pic" />
-
     <android.support.v7.widget.GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         app:columnCount="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,6 +28,7 @@
             android:onClick="play"
             android:tag="canyoutakemetoairportplease"
             android:text="Can you take \n me to the \n airport, please?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_columnWeight="1"
             app:layout_gravity="fill"
             app:layout_rowWeight="1" />
@@ -52,6 +38,7 @@
             android:onClick="play"
             android:tag="howmuchwillitbe"
             android:text="How much will it\n be?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_columnWeight="1"
             app:layout_gravity="fill"
             app:layout_rowWeight="1" />
@@ -62,6 +49,7 @@
             android:onClick="play"
             android:tag="isitfarfromhere"
             android:text="Is it far \nfrom here?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_columnWeight="1"
             app:layout_gravity="fill"
             app:layout_rowWeight="1" />
@@ -71,6 +59,7 @@
             android:onClick="play"
             android:tag="itsstraighton"
             android:text="It's straight\n on."
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_columnWeight="1"
             app:layout_gravity="fill"
             app:layout_rowWeight="1" />
@@ -80,6 +69,7 @@
             android:onClick="play"
             android:tag="stop"
             android:text="Stop!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_columnWeight="1"
             app:layout_gravity="fill"
             app:layout_rowWeight="1" />
@@ -89,6 +79,7 @@
             android:onClick="play"
             android:tag="takemethereplease"
             android:text="Take me there,\nplease."
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_columnWeight="1"
             app:layout_gravity="fill"
             app:layout_rowWeight="1" />
@@ -98,6 +89,7 @@
             android:onClick="play"
             android:tag="taxi"
             android:text="Taxi!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_columnWeight="1"
             app:layout_gravity="fill"
             app:layout_rowWeight="1" />
@@ -107,6 +99,7 @@
             android:onClick="play"
             android:tag="yougoleft"
             android:text="You go left."
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_columnWeight="1"
             app:layout_gravity="fill"
             app:layout_rowWeight="1" />
@@ -114,21 +107,4 @@
 
     </android.support.v7.widget.GridLayout>
 
-    <TextView
-        android:id="@+id/phraseTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="163dp"
-        android:layout_marginLeft="163dp"
-        android:layout_marginRight="163dp"
-        android:layout_marginStart="163dp"
-        android:layout_marginTop="4dp"
-        android:padding="10dp"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="20sp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 </android.support.constraint.ConstraintLayout>
